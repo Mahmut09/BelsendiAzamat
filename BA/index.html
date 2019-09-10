@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='css/style.css'>
+    <script type="text/javascript" src="js/main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="set">
+        <div class="container">
+            <div class="welcome">
+                <h1>
+                    Lorem ipsum dolor
+                </h1>
+            </div>
+            <div class="flex">
+                <div class="gears">
+                        <img id="gear1" src="img/settings.svg" alt="#">
+                        <img id="gear2" src="img/settings.svg" alt="#">
+                    </div>
+                    <form action="" method="post" name="test" id="form">
+                        <div class="dws-input">
+                                <p id='error'>
+                                <!-- Вы не ввели логин! -->
+                                </p>
+                            <input type="text" name="Name" placeholder="Введите логин" id="name">
+                                <p id='errorPass'>
+                                    <!-- Вы не ввели пароль! -->
+                                </p>
+                            <input type="password" name="password" placeholder="Введите пароль" id="password">
+                                <p id='errorRePass'>
+                                    <!-- Пароли не совпадают -->
+                                </p>
+                            <input type="password" name="RePassword" placeholder="Введите пароль еще раз" id="RePassword">
+                                <br>
+                            <input class='dws-submit' id="btn" type="button" onclick="valid(document.getElementById('form')); Revalid(document.getElementById('form')); greenInp(document.getElementById('form')); gears(document.getElementById('form'))" name="submit" value="Готово">
+                        </div>
+                    </form>
+            </div>
+                 <div class="cssload-container" id="preloader">
+                    <div class="cssload-double-torus"></div>
+                </div>  
+        </div>
+    </div>
+</body>
+
+</html>
