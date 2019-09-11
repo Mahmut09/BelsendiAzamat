@@ -8,7 +8,7 @@
      let errorRePass =  document.getElementById('errorRePass');
     
      if (name == "" || name == " ")
-     error.innerHTML = 'Вы не ввели логин!' 
+     error.innerHTML = 'Вы не ввели логин!'
    else
      if (password == "") 
      errorPass.innerHTML = 'Вы не ввели пароль!'
@@ -25,7 +25,7 @@
     else{
       errorRePass.innerHTML = ""
     }
-    }
+  }
 
     function Revalid (form) {
       var name = form.name.value;
@@ -47,14 +47,16 @@
     var password = form.password.value;
     var RePassword = form.RePassword.value;
 
-    let gear1 =  document.getElementById('gear1');
-    let gear2 =  document.getElementById('gear2');
+    let smallGear1 =  document.getElementById('smallGear1');
+    let bigGear2 =  document.getElementById('bigGear2');
 
      if (name !== "" && password !== "" && RePassword !== "" && RePassword == password){
-      gear1.style.transform = 'rotateZ(360deg)'
-      gear1.style.background = ''
-      gear2.style.transform = 'rotateZ(-360deg)'
-      gear2.style.background = ''
+      smallGear1.style.transform = 'rotateZ(-360deg)'
+      smallGear1.style.fill = 'green'
+      smallGear1.style.transition = '1.0s'
+      bigGear2.style.transform = 'rotateZ(360deg)'
+      bigGear2.style.fill = 'green'
+      bigGear2.style.transition = '1.0s'
      }
   }
   function greenInp (form) {
@@ -76,7 +78,6 @@
       btn.style.color = 'black'
      }
   }
-
    
 window.onload = function() {
   let preloader = document.getElementById('preloader');

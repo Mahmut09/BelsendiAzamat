@@ -1,8 +1,16 @@
+@font-face{
+    src: url('fonts/Poiret.ttf');
+    font-family: 'Poiret'
+}
+@font-face{
+     src: url('fonts/Montserat-Regular.ttf');
+     font-family: 'Montserat-Regular'
+}
 *{
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
     overflow: hidden;
+    overflow-x: hidden;  
 }
 .set{
     background: -moz-linear-gradient(180deg, rgba(15,10,77,1) 0%, rgba(77,0,0,1) 100%); /* ff3.6+ */
@@ -15,8 +23,10 @@
     height: 996px
 }
 .welcome{
-    margin: 25px 0 5px 15px;
+    margin: 25px 0 45px 15px;
     font-size: 24px;
+    color: #fff;
+    font-family: 'Poiret';
 }
 .flex{
     display: flex;
@@ -32,9 +42,31 @@ input[type='text'], input[type='password']{
     padding-left: 10px;
     border: none;
 }
+input[type='text']::placeholder, input[type='password']::placeholder{
+    font-family: 'Montserat-Regular';
+}
+.icons img{
+    width: 40px;
+}
+.icons img:hover{
+    filter: brightness(0.5);
+}
+.icons li{
+    margin: 0 10px 40px 0;
+}
+.icons li:first-child{
+    margin: 10px 10px 50px 0;
+}
+.icons li:nth-child(2n){
+    margin-bottom: 45px
+}
 .dws-input{
     padding-top: 15px;
-    background: 
+
+}
+.icons, .dws-input{
+    display: inline-block;
+    vertical-align: middle;
 }
 .dws-input p{
     padding: 20px 0 20px 0;
@@ -63,15 +95,41 @@ input[type='text'], input[type='password']{
     font-size: 18px;
     margin: 0
 }
-.gears img{
+#smallGear1{
     transition-duration: 3.0s;
-    border-radius: 100%
+    border-radius: 100%;
+    animation: spin 2s linear infinite;
+    fill: white 
 }
-#gear1{
+#bigGear2{
+    transition-duration: 3.7s;
+    border-radius: 100%;
+    animation: reSpin 2s linear infinite;
+    fill: white 
+}
+#smallGear1{
     position: relative;
     left: 15px;
-    width: 125px;
-    transform: rotateZ(-2deg);
+}
+@keyframes spin {
+
+    form {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(90deg);
+    }
+}
+@keyframes reSpin {
+
+    form {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(-90deg);
+    }
 }
 #gear2{
     width: 200px;
@@ -94,4 +152,146 @@ input[type='text'], input[type='password']{
     -ms-animation: cssload-spin 1500ms infinite linear;
     -webkit-animation: cssload-spin 1500ms infinite linear;
     -moz-animation: cssload-spin 1500ms infinite linear;
+}
+
+@media screen and (max-width: 320px){
+    /* Mobile */
+      *{
+        margin: 0;
+        padding: 0;
+        overflow-y: scroll;  
+        overflow-x: hidden;  
+    }
+    .welcome {
+        font-size: 16px;
+    }
+    .flex{
+        max-width: 300px;
+        display: block;
+    }
+    .gears{
+        height: 260px;
+        position: relative;
+        bottom: 65px;
+        overflow-x: hidden; 
+        overflow-y: hidden;  
+    }
+    #smallGear1{
+        width: 30%;
+    }
+    #bigGear2{
+        width: 50%;
+    }
+    #form{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    input[type='text'], input[type='password']{
+        width: 78.75%;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 6px;
+        padding-left: 10px;
+        border: none;
+    }
+    .icons{
+        position: relative;
+        left: 15px;
+        width: 21%
+    }
+}
+@media screen and (max-width: 375px){
+    /* Mobile */
+      *{
+        margin: 0;
+        padding: 0;
+        overflow-y: scroll;  
+        overflow-x: hidden;  
+    }
+    .welcome {
+        font-size: 16px;
+    }
+    .flex{
+        max-width: 300px;
+        display: block;
+    }
+    .gears{
+        height: 260px;
+        position: relative;
+        bottom: 65px;
+        overflow-x: hidden; 
+        overflow-y: hidden;  
+    }
+    #smallGear1{
+        width: 30%;
+    }
+    #bigGear2{
+        width: 50%;
+    }
+    #form{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    input[type='text'], input[type='password']{
+        width: 78.75%;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 6px;
+        padding-left: 10px;
+        border: none;
+    }
+    .icons{
+        position: relative;
+        left: 15px;
+        width: 21%;
+    }
+}
+@media screen and (max-width: 425px){
+    /* Mobile */
+      *{
+        margin: 0;
+        padding: 0;
+        overflow-y: scroll;  
+        overflow-x: hidden;  
+    }
+    .welcome {
+        font-size: 19px;
+    }
+    .flex{
+        max-width: 300px;
+        display: block;
+    }
+    .gears{
+        height: 260px;
+        position: relative;
+        bottom: 65px;
+        overflow-x: hidden; 
+        overflow-y: hidden;  
+    }
+    #smallGear1{
+        width: 30%;
+    }
+    #bigGear2{
+        width: 50%;
+    }
+    #form{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    input[type='text'], input[type='password']{
+        width: 78.75%;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 6px;
+        padding-left: 10px;
+        border: none;
+    }
+    .icons{
+        position: relative;
+        left: 15px;
+        width: 21%
+    }
 }
